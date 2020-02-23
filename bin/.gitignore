@@ -1,0 +1,8 @@
+/application.properties
+/application.yml
+/logback.xml
+/main/
+/querydsl/
+/test/
+/default/
+/com/

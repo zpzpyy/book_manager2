@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+table{width:100%;}
+table td, table th { border: 1px solid grey;}
+table th { background: #eee;}
+.pagination-div{user-select: none;}
+.pagination-div span{border-radius:3px;border:1px solid #999;
+   padding:5px;margin:10px 0px 0px 10px;display:inline-block}
+span.selected{background:#ccf;}
+
+
+.new_cp_bt{background:#5d6b71; font-size:12px; border-radius:4px; padding:10px 15px; float:right; color:white; margin-right:20px; }
+.new_cp_bt:hover{background:#2F3C55; font-size:12px; border-radius:4px; padding:10px 15px; float:right; color:white; margin-right:20px;}
+
+.main-title {
+	font-family: 나눔고딕,NanumGothic,돋움,Dotum;
+}
+
+.b_columns {
+	color : white;
+}
+
+.b_columns:hover {
+	color : yellow;
+}
+
+.fixed-table-body{
+	overflow-y: auto;
+}

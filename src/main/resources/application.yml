@@ -1,0 +1,10 @@
+server:
+  port: 9000
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false

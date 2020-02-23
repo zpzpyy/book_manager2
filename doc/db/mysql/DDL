@@ -1,0 +1,29 @@
+
+CREATE TABLE `book_list` (
+   `ID` int(12) NOT NULL AUTO_INCREMENT,
+   `BOOK_NAME` varchar(100) NOT NULL COMMENT '책이름',
+   `WRITER` varchar(100) DEFAULT NULL COMMENT '저자',
+   `PUBLISHER` varchar(30) DEFAULT NULL COMMENT '출판사',
+   `BUYER` varchar(7) DEFAULT NULL COMMENT '구매자',
+   `LENDER` varchar(7) DEFAULT NULL COMMENT '대여자',
+   `STATE` char(4) DEFAULT '대여가능' COMMENT '상태(대여가능/대여중/알수없음)',
+   `UPT_DATE` datetime DEFAULT NULL COMMENT '수정일',
+   `REG_DATE` datetime NOT NULL DEFAULT current_timestamp() COMMENT '등록일',
+   `PRICE` varchar(6) DEFAULT NULL,
+   `INFO` varchar(300) DEFAULT NULL COMMENT '비고',
+   PRIMARY KEY (`ID`),
+   KEY `BOOK_LIST_IDX1` (`BOOK_NAME`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '도서상세정보테이블';
+ 
+ CREATE TABLE `book_history` (
+   `ID` int(12) NOT NULL AUTO_INCREMENT,
+   `BOOK_ID` int(12) NOT NULL COMMENT 'BOOK_ID(seq)',
+   `BUYER` varchar(7) DEFAULT NULL COMMENT '구매자',
+   `LENDER` varchar(7) DEFAULT NULL COMMENT '대여자',
+   `STATE` char(4) DEFAULT '대여가능' COMMENT '상태(대여가능/대여중/알수없음)',
+   `REG_DATE` datetime NOT NULL DEFAULT current_timestamp() COMMENT '일자',
+   PRIMARY KEY (`ID`),
+   KEY `BOOK_HISTORY_IDX1` (`BOOK_ID`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '도서히스토리테이블';
+ 
+ 
